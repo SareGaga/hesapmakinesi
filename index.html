@@ -6,8 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anasayfa</title>
     <link rel="stylesheet" href="css/style.css">
+<style>
+    #kutu1{
+        width:150px;
+        height:150px;
+        background-color:green;
+    }
+</style>
 </head>
 <body>
-    
+
+    <div id="kutu1" onclick="document.querySelector('#kutu1').style.backgroundColor='red';">
+       kutu1
+    </div>
+   
+    <button id="buton1">buton1</button>
+
+    <script src ="js/script.js"></script>
+    <script>
+     
+        setTimeout(function(){   alert("merhaba");},3000);
+    </script>
 </body>
 </html>

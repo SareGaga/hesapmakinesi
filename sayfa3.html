@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+// daha önce bu sayfaya kaç kere girildi
+// bu bilgiyi #giris-sayısı kutuusunda göster.
+    let lsGirisSayısı= localStorage.getItem("giriş")
+    let guncelGirişSayısı=0;
+    if(lsGirisSayısı===null){
+        guncelGirişSayısı=1;
+        localStorage.setItem("girisSayısı0","1");
+
+    }else{
+        guncelGirişSayısı=parseInt(lsGirisSayısı)+1;
+        localStorage.setItem("girişSayısı",guncelGirişSayısı);
+
+    }
+    document.querySelector("#giriş-sayısı").innerHTML=guncelGirişSayısı
+   
+    //button1 basıldığında localstorageda giriş sayısı0 olsun
+    //kutu1 içinde 0 yazsın 
+   document.querySelector('#buton1').addEventListener('click',function(event){
+    localStorage.setItem("girisSayısı","0");
+    document.querySelector("#giris-sayısı").innerHTML="0";
+   })
+   </script> 
+</body>
+</html>
